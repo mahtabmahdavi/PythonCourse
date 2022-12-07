@@ -41,4 +41,4 @@ for i in range(3, 13):
     jump += 20
     preInternal = internalAngle
 
-pen.done()
+turtle.done()
