@@ -5,4 +5,4 @@ By using [turtle library](https://docs.python.org/3/library/turtle.html) which i
 
 ### Output:
 
-![Output Draw](Draw.png)
+![Output Draw](OutputDraw.png)
