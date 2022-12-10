@@ -39,7 +39,7 @@ def getInput(role: str, sign: str):
             col = random.randint(0, 2)
             
             if gameBoard[row][col] == "-":
-                gameBoard[row][col] = "O"
+                gameBoard[row][col] = sign
                 print("row:", row + 1)
                 print("col:", col + 1)
                 break
