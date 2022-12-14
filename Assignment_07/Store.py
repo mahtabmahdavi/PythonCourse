@@ -3,15 +3,19 @@ import qrcode
 
 def readFromDatabase():
     print("Loading ...")
-    file = open("Database.txt", "r")
 
-    for line in file:
-        tempProduct = line[:-1].split(",")
-        newProduct = {"code":tempProduct[0], "name":tempProduct[1], "price":tempProduct[2], "count":tempProduct[3]}
-        PRODUCTS.append(newProduct)
-    
-    file.close()
-    print("Database loaded.")
+    try:
+        with open("Database.txt", "r") as file:
+            for line in file:
+                tempProduct = line[:-1].split(",")
+                newProduct = {"code":tempProduct[0], "name":tempProduct[1], "price":tempProduct[2], "count":tempProduct[3]}
+                PRODUCTS.append(newProduct)
+      
+        print("Database loaded.")
+
+    except FileNotFoundError:
+        print("Database was NOT found!")
+        exit()
 
 
 def menu():
