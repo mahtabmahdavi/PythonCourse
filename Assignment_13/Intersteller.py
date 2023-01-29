@@ -44,9 +44,9 @@ class Game(arcade.Window):
 
     def on_key_press(self, symbol: int, modifiers: int):
         if symbol == 97:
-            self.me.center_x = self.me.center_x + self.me.speed
-        elif symbol == 100:
             self.me.center_x = self.me.center_x - self.me.speed
+        elif symbol == 100:
+            self.me.center_x = self.me.center_x + self.me.speed
 
     def on_update(self, delta_time: float):
         self.enemy.center_y -= self.enemy.speed
